@@ -8,6 +8,7 @@ def numeros(n):
 def run():
     mi_num = input("Dame un número tontito: ")
     assert mi_num.isnumeric(), "Tienes que ingresar un número"
+    assert int(mi_num)>=1, "Tienes que ingresar un número positivo"
     lista = list(filter(lambda n: mi_num % n == 0,numeros(int(mi_num))))
     print(lista)
 
